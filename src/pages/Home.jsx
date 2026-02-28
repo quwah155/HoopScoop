@@ -43,7 +43,7 @@ const Home = () => {
     return (
         <div>
             <Hero />
-            <div className="container" style={{ paddingBottom: '100px' }}>
+            <div id="latest" className="container" style={{ paddingBottom: '100px' }}>
                 <SearchBar onSearch={setSearchTerm} />
 
                 <div style={{

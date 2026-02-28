@@ -35,7 +35,7 @@ const SearchBar = ({ onSearch }) => {
                 onFocus={(e) => {
                     e.target.style.background = 'rgba(0,0,0,0.5)';
                     e.target.style.borderColor = 'var(--primary)';
-                    e.target.style.boxShadow = '0 0 15px rgba(196, 244, 52, 0.1)';
+                    e.target.style.boxShadow = '0 0 15px rgba(255, 71, 71, 0.15)';
                 }}
                 onBlur={(e) => {
                     e.target.style.background = 'rgba(0,0,0,0.3)';

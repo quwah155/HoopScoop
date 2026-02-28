@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import VerifyEmail from "./pages/VerifyEmail";
 import Landing from "./pages/Landing";
+import Scores from "./pages/Scores";
 
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useAuth();
@@ -75,6 +76,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/verify-email" element={<VerifyEmail />} />
+        <Route path="/scores" element={<Scores />} />
         <Route
           path="/create"
           element={

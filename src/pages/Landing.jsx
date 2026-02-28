@@ -30,7 +30,7 @@ const Landing = () => {
                 maxWidth: '600px',
                 padding: '0 8px'
             }}>
-                Join thousands of hoop heads getting deep analysis, highlight breakdowns, and exclusive stories.
+                Join thousands of hoop heads getting deep analysis, highlight breakdowns, gossips, controversies and exclusive stories.
                 <span style={{ color: '#fff' }}> Sign up to access premium content.</span>
             </p>
 
@@ -41,7 +41,7 @@ const Landing = () => {
                 justifyContent: 'center'
             }}>
                 <Link to="/signup" className="btn btn-primary" style={{ padding: '14px 32px', fontSize: '1rem' }}>
-                    Join the Squad
+                    Join the  Hoop-Squad
                 </Link>
                 <Link to="/login" style={{
                     padding: '14px 32px',
@@ -65,7 +65,7 @@ const Landing = () => {
                 left: '10%',
                 width: 'clamp(150px, 30vw, 300px)',
                 height: 'clamp(150px, 30vw, 300px)',
-                background: 'radial-gradient(circle, rgba(196, 244, 52, 0.1) 0%, rgba(0,0,0,0) 70%)',
+                background: 'radial-gradient(ellipse, rgba(255, 71, 71, 0.07) 0%, transparent 70%)',
                 zIndex: -1,
                 pointerEvents: 'none'
             }}></div>
@@ -75,7 +75,7 @@ const Landing = () => {
                 right: '10%',
                 width: 'clamp(200px, 35vw, 400px)',
                 height: 'clamp(200px, 35vw, 400px)',
-                background: 'radial-gradient(circle, rgba(181, 56, 255, 0.1) 0%, rgba(0,0,0,0) 70%)',
+                background: 'radial-gradient(ellipse, rgba(247, 233, 152, 0.06) 0%, transparent 70%)',
                 zIndex: -1,
                 pointerEvents: 'none'
             }}></div>

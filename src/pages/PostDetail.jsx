@@ -110,11 +110,11 @@ const PostDetail = () => {
                     flexWrap: 'wrap',
                     gap: '12px'
                 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-                        <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#333' }}></div>
-                        <div>
-                            <div style={{ fontWeight: '600' }}>{post.author?.email || 'HoopScoop Admin'}</div>
-                            <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', minWidth: 0 }}>
+                        <div style={{ width: '36px', height: '36px', borderRadius: '50%', background: '#333', flexShrink: 0 }}></div>
+                        <div style={{ minWidth: 0 }}>
+                            <div style={{ fontWeight: '600', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{post.author?.email || 'HoopScoop Admin'}</div>
+                            <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>
                                 {post.createdAt ? new Date(post.createdAt).toLocaleDateString() : 'Just now'}
                             </div>
                         </div>
@@ -148,10 +148,11 @@ const PostDetail = () => {
 
                 <div style={{
                     lineHeight: '1.8',
-                    fontSize: '1.15rem',
+                    fontSize: 'clamp(0.95rem, 3.5vw, 1.15rem)',
                     whiteSpace: 'pre-wrap',
                     color: '#e0e0e0',
-                    fontFamily: 'serif'
+                    fontFamily: 'serif',
+                    wordBreak: 'break-word'
                 }}>
                     {post.content}
                 </div>

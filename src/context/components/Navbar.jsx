@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import LiveScores from './LiveScores';
 
 const Navbar = () => {
     const { user, logout } = useAuth();
@@ -8,7 +9,7 @@ const Navbar = () => {
     const location = useLocation();
     const [menuOpen, setMenuOpen] = useState(false);
 
-    // Close drawer on route change
+    
     useEffect(() => {
         setMenuOpen(false);
     }, [location.pathname]);
@@ -94,6 +95,9 @@ const Navbar = () => {
                     </button>
                 </div>
             </nav>
+
+            {/* Live scores ticker strip */}
+            <LiveScores />
 
             {/* Mobile overlay backdrop */}
             {menuOpen && (

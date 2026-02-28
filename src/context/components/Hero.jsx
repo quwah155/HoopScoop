@@ -9,13 +9,13 @@ const Hero = () => {
             <div style={{
                 display: 'inline-block',
                 padding: '6px 16px',
-                background: 'rgba(196, 244, 52, 0.1)',
+                background: 'rgba(255, 71, 71, 0.1)',
                 color: 'var(--primary)',
                 borderRadius: '30px',
                 fontSize: 'clamp(0.75rem, 2.5vw, 0.9rem)',
                 fontWeight: '600',
                 marginBottom: '20px',
-                border: '1px solid rgba(196, 244, 52, 0.3)'
+                border: '1px solid rgba(255, 71, 71, 0.3)'
             }}>
                 🏀 The #1 Basketball Community
             </div>

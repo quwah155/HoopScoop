@@ -68,15 +68,15 @@ const Login = () => {
             paddingTop: '80px'
         }}>
             <div className="glass" style={{
-                padding: '50px',
+                padding: 'clamp(20px, 7vw, 50px)',
                 borderRadius: 'var(--radius-lg)',
                 border: '1px solid var(--glass-border)',
                 width: '100%',
                 maxWidth: '450px'
             }}>
                 <h2 style={{
-                    fontSize: '2rem',
-                    marginBottom: '30px',
+                    fontSize: 'clamp(1.4rem, 6vw, 2rem)',
+                    marginBottom: '24px',
                     textAlign: 'center',
                     fontWeight: '800'
                 }}>

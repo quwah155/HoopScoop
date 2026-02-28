@@ -8,7 +8,7 @@ const cookies = new Cookies();
 const COOKIE_NAME = "hoop_token";
 const COOKIE_OPTIONS = {
   path: "/",
-  maxAge: 2 * 60 * 60, // 2 hours in seconds
+  maxAge: 2 * 60 * 60, 
   sameSite: "lax",
   secure: window.location.protocol === "https:", // auto: true on Vercel, false on localhost
 };
@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
       try {
         const decoded = jwtDecode(savedToken);
         if (decoded.exp * 1000 > Date.now()) {
-          // Token still valid
+          
           setToken(savedToken);
           setUser({ id: decoded.id, email: decoded.email, role: decoded.role });
         } else {

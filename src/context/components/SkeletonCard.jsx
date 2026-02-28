@@ -15,7 +15,7 @@ const SkeletonCard = () => {
             }}></div>
 
             <div style={{ padding: '25px' }}>
-                {/* Category Placeholder */}
+              
                 <div className="skeleton-pulse" style={{
                     width: '80px',
                     height: '20px',
