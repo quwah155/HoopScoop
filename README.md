@@ -121,18 +121,19 @@ This guarantees the correct API URL is baked into every Vercel build without rel
 
 ## 🗺 Pages & Routes
 
-| Path               | Component        | Guard         | Description                                         |
-| ------------------ | ---------------- | ------------- | --------------------------------------------------- |
-| `/`                | `PublicHome`     | None          | Shows `Landing` if logged out, `Home` if logged in  |
-| `/home`            | `Home`           | Auth required | Post feed (APPROVED only for Users, all for Admins) |
-| `/post/:id`        | `PostDetail`     | Auth required | Full post + comments + like toggle                  |
-| `/create`          | `CreatePost`     | Auth required | Create a new post                                   |
-| `/my-posts`        | `MyPosts`        | Auth required | Current user's posts with status badges             |
-| `/edit/:id`        | `EditPost`       | Auth required | Edit a post (author or admin only)                  |
-| `/admin/dashboard` | `AdminDashboard` | Admin only    | Approve/reject posts + manage user roles            |
-| `/login`           | `Login`          | Public        | Email + password login                              |
-| `/signup`          | `Signup`         | Public        | Registration form                                   |
-| `/verify-email`    | `VerifyEmail`    | Public        | OTP verification after signup                       |
+| Path               | Component        | Guard         | Description                                                             |
+| ------------------ | ---------------- | ------------- | ----------------------------------------------------------------------- |
+| `/`                | `PublicHome`     | None          | Shows `Landing` if logged out, `Home` if logged in                      |
+| `/home`            | `Home`           | Auth required | Post feed (APPROVED only for Users, all for Admins)                     |
+| `/post/:id`        | `PostDetail`     | Auth required | Full post + comments + like toggle                                      |
+| `/create`          | `CreatePost`     | Auth required | Create a new post                                                       |
+| `/my-posts`        | `MyPosts`        | Auth required | Current user's posts with status badges                                 |
+| `/edit/:id`        | `EditPost`       | Auth required | Edit a post (author or admin only)                                      |
+| `/admin/dashboard` | `AdminDashboard` | Admin only    | Approve/reject posts + manage user roles                                |
+| `/login`           | `Login`          | Public        | Email + password login                                                  |
+| `/signup`          | `Signup`         | Public        | Registration form                                                       |
+| `/verify-email`    | `VerifyEmail`    | Public        | OTP verification after signup                                           |
+| `/scores`          | `Scores`         | Public        | Live NBA scores, upcoming games, and final results with date navigation |
 
 ### Route Guards
 
@@ -199,7 +200,11 @@ const res = await fetch(`${import.meta.env.VITE_API_URL}/api/posts`, {
 
 ### `Navbar.jsx`
 
-Sticky top nav with role-aware links. On mobile (≤768px), switches to a hamburger button that opens a slide-in drawer. Drawer closes automatically on route change.
+Sticky top nav with role-aware links and the `LiveScores.jsx` horizontal scrolling ticker integrated below it. On mobile (≤768px), switches to a hamburger button that opens a slide-in drawer. Drawer closes automatically on route change.
+
+### `LiveScores.jsx`
+
+Horizontal scrolling NBA live scores ticker. Automatically fetches from the backend and polls every 60 seconds (with Page Visibility and AbortController optimizations).
 
 ### `BlogCard.jsx`
 
