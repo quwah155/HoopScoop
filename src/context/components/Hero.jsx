@@ -37,7 +37,7 @@ const Hero = () => {
                 marginRight: 'auto',
                 padding: '0 8px'
             }}>
-                Dive into deep analysis, breaking news, and the culture of basketball.
+                Dive into deep analysis, breaking news, transfer rumours, controversies and the culture of basketball.
                 From the hardwood to the blacktop.
             </p>
             <a href="#latest" className="btn btn-primary btn-glow">

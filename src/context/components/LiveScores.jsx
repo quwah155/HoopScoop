@@ -2,12 +2,12 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
 const POLL_INTERVAL_MS = 60_000;
-// Base ms per game chip for dynamic scroll speed (~8s per chip, min 20s, max 80s)
+
 const SCROLL_MS_PER_CHIP = 8_000;
 const SCROLL_MIN_MS = 20_000;
 const SCROLL_MAX_MS = 80_000;
 
-/* ─── Static styles (extracted outside component to avoid re-creation) ─── */
+
 
 const S = {
   wrapper: {
@@ -46,7 +46,7 @@ const S = {
     borderLeft: '1px solid rgba(255,255,255,0.05)',
     whiteSpace: 'nowrap',
   },
-  // chip base
+  
   chipBase: {
     display: 'inline-flex',
     flexShrink: 0,
@@ -102,7 +102,7 @@ function calcScrollDuration(chipCount) {
   return Math.min(SCROLL_MAX_MS, Math.max(SCROLL_MIN_MS, ms));
 }
 
-/* ─── GameChip ─────────────────────────────────────────────── */
+/* ─── GameChip────── */
 
 const GameChip = ({ game }) => {
   const isLive = game.status === 'live';
@@ -148,7 +148,7 @@ const GameChip = ({ game }) => {
   );
 };
 
-/* ─── LiveScores ───────────────────────────────────────────── */
+/* ─── LiveScores ──── */
 
 const LiveScores = () => {
   const [scores, setScores] = useState(null);
@@ -156,7 +156,7 @@ const LiveScores = () => {
   const intervalRef = useRef(null);
   const abortRef = useRef(null);  // AbortController ref
 
-  // ── fetch with abort support ────────────────────────────────
+  
   const fetchScores = useCallback(async () => {
     // Cancel any in-flight request
     if (abortRef.current) abortRef.current.abort();
@@ -179,7 +179,7 @@ const LiveScores = () => {
     }
   }, []);
 
-  // ── polling with Page Visibility API ───────────────────────
+  
   useEffect(() => {
     fetchScores();
 
