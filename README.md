@@ -2,7 +2,7 @@
 
 The React frontend for HoopScoop, a modern basketball blog platform. Built with **React 19**, **Vite**, and **React Router v7**, featuring cookie-based JWT auth, a post approval flow, role-based UI, and full responsiveness down to 320px.
 
-**Live App:** https://basketball-blog-frontend.vercel.app  
+**Live App:** https://hoopsqoop.vercel.app  
 **Backend API:** https://basketball-blog-be.vercel.app
 
 ---
